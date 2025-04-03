@@ -19,16 +19,10 @@
   </div>
 
   <div class="stat place-items-center">
-    <div class="stat-title">Moneda</div>
-    <div class="stat-value">{{ country().currencies.name }}</div>
-    <div class="stat-desc">{{ country().currencies.symbol }}</div>
+    <div class="stat-title">Idioma</div>
+    <div class="stat-value">{{ country().languages }}</div>
+    <div class="stat-desc">{{ country().name }}</div>
   </div>
-
-  <!-- <div class="stat place-items-center">
-    <div class="stat-title">Bandera</div>
-    <div class="stat-value">{{ country().flag }}</div>
-    <div class="stat-desc">{{ country().subRegion }}</div>
-  </div> -->
 
   <div class="stat place-items-center">
     <div class="stat-title">Limita con:</div>
@@ -37,22 +31,22 @@
   </div>
 
   <div class="stat place-items-center">
-    <div class="stat-title">Lenguaje</div>
-    <div class="stat-value">{{ country().languages }}</div>
-    <div class="stat-desc">{{ country().name }}</div>
+    <div class="stat-title">Moneda</div>
+    <div class="stat-value">{{ country().currencies.name }}</div>
+    <div class="stat-desc">{{ country().currencies.symbol }}</div>
   </div>
 </section>
 
-<section class="diff aspect-[16/9]">
-  <div class="diff-item-1">
+<section class="mb-2">
+  <div class="">
     <img [alt]="country().name" [src]="country().flagSvg" />
   </div>
-  <div class="diff-item-2">
+  <!-- <div class="">
     <img
       class="blur brightness-75"
       [alt]="country().name"
       [src]="country().flagSvg"
     />
-  </div>
-  <div class="diff-resizer"></div>
+  </div> -->
+  <!-- <div class="diff-resizer"></div> -->
 </section>

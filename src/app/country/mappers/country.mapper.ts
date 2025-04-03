@@ -12,10 +12,10 @@ export class CountryMapper {
       name: restCountry.translations['spa'].common ?? 'No Spanish Name',
       population: restCountry.population,
       borders: restCountry.borders ?? [],
-      languages: Object.values(restCountry.languages)?.join(', '),
-      currencies: {
-        name: Object.values(restCountry.currencies)[0].name,
-        symbol: Object.values(restCountry.currencies)[0].symbol,},
+      currencies: (restCountry.currencies) ? Object.values(restCountry.currencies)[0] : { name: 'No Currency', symbol: 'No Symbol' },
+      languages: (restCountry.languages) ? Object.values(restCountry.languages)[0] : { name: '' },
+
+
 
       region: restCountry.region,
       subRegion: restCountry.subregion,
