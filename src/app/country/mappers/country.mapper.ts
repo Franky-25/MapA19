@@ -11,10 +11,9 @@ export class CountryMapper {
       flagSvg: restCountry.flags.svg,
       name: restCountry.translations['spa'].common ?? 'No Spanish Name',
       population: restCountry.population,
+      currencies: (restCountry.currencies) ? Object.values(restCountry.currencies)[0] : { name: '', symbol: 'No Symbol' },
       borders: restCountry.borders ?? [],
-      currencies: (restCountry.currencies) ? Object.values(restCountry.currencies)[0] : { name: 'No Currency', symbol: 'No Symbol' },
-      languages: (restCountry.languages) ? Object.values(restCountry.languages)[0] : { name: '' },
-
+      languages: (restCountry.languages) ? Object.values(restCountry.languages)[0] ?? 'No Language' : '',
 
 
       region: restCountry.region,
