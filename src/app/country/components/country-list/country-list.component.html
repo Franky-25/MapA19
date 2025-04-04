@@ -7,12 +7,12 @@
         <th>Bandera</th>
         <th>Nombre</th>
         <th>Capital</th>
-        <th>Población País</th>
+        <th>Población Pa</th>
         <th></th>
       </tr>
     </thead>
     <tbody>
-      @for (country of countries(); track country.cca2; let index = $index) {
+      @for (country of sortedCountries; track country.cca2; let index = $index) {
       <tr>
         <td>{{ index + 1 }}</td>
         <td>{{ country.flag }}</td>

@@ -9,7 +9,12 @@ import { RouterLink } from '@angular/router';
   templateUrl: './country-list.component.html',
 })
 export class CountryListComponent {
+
   countries = input.required<Country[]>();
+
+  get sortedCountries(): Country[] {
+    return [...this.countries().sort((a, b) => a.name.localeCompare(b.name))];
+  }
 
   errorMessage = input<string | unknown | null>();
   isLoading = input<boolean>(false);
