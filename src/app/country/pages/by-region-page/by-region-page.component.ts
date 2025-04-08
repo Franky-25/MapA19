@@ -14,7 +14,7 @@ function validateQueryParam(queryParam: string): Region {
     africa: 'Africa',
     americas: 'Americas',
     asia: 'Asia',
-    europe: 'Europe',
+    europe: 'Europa',
     oceania: 'Oceania',
     antarctic: 'Antarctic',
   };
@@ -34,7 +34,7 @@ export class ByRegionPageComponent {
     'Africa',
     'Americas',
     'Asia',
-    'Europe',
+    'Europa',
     'Oceania',
     'Antarctic',
   ];
