@@ -14,7 +14,7 @@ function validateQueryParam(queryParam: string): Region {
     africa: 'Africa',
     americas: 'Americas',
     asia: 'Asia',
-    europe: 'Europa',
+    europe: 'Europe',
     oceania: 'Oceania',
     antarctic: 'Antarctic',
   };
@@ -34,7 +34,7 @@ export class ByRegionPageComponent {
     'Africa',
     'Americas',
     'Asia',
-    'Europa',
+    'Europe',
     'Oceania',
     'Antarctic',
   ];
@@ -51,7 +51,7 @@ export class ByRegionPageComponent {
   countryResource = rxResource({
     request: () => ({ region: this.selectedRegion() }),
     loader: ({ request }) => {
-      console.log({ request: request.region });
+      // console.log({ request: request.region });
 
       if (!request.region) return of([]);
 
